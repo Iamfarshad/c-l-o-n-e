@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spotify | Clone</title>
+    <link
+      rel="shortcut icon"
+      href="https://e7.pngegg.com/pngimages/158/639/png-clipart-spotify-streaming-media-logo-playlist-spotify-app-icon-logo-music-download.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+
+    <!--Navigation Bar-->
+
+    <header class="flex justify-between items-center w-full h-14 bg-black">
+      <div class="flex justify-center items-center text-white ml-2 gap-3">
+        <img
+          class="w-[50px] h-12"
+          src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/571e5943-4616-4654-bf99-10b3c98f8686/d98301o-426f05ca-8fe5-4636-9009-db9dd1fca1f3.png"
+          alt=""
+        />
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 text-white w-[30px] h-10 ml-3 hover:text-gray-50 cursor-pointer"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          />
+        </svg>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 text-white w-[30px] h-10 hover:text-gray-50 cursor-pointer"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          />
+        </svg>
+      </div>
+
+      <!--input tag-->
+
+      <div class="flex justify-center items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 mr-5 hover:text-gray-100 cursor-pointer text-white"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+          />
+        </svg>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 text-black bg-gray-200 h-8 w-[40px] rounded-l-lg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+          />
+        </svg>
+
+        <input
+          class="w-[400px] h-8 bg-gray-100"
+          type="text"
+          placeholder="What do you want to play"
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 bg-gray-200 h-8 w-[40px] rounded-r-lg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15M9 12l3 3m0 0 3-3m-3 3V2.25"
+          />
+        </svg>
+      </div>
+
+      <!--buttons-->
+
+      <div class="flex justify-center items-center gap-3">
+        <button
+          class="bg-gray-200 text-black h-8 w-[9rem] rounded-full hover:bg-gray-50"
+        >
+          Explore Premium
+        </button>
+
+        <a class="text-white hover:text-gray-100" href="#">Install App</a>
+      </div>
+
+      <div class="flex justify-center items-center gap-3">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 h-8 w-[40px] text-white hover:text-gray-100 cursor-pointer"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5"
+          />
+        </svg>
+
+        <button
+          class="h-8 w-[40px] bg-gray-200 rounded-full hover:bg-gray-50 mr-2"
+        >
+          S
+        </button>
+      </div>
+    </header>
+   
+    <section class="flex h-screen">
+
+      <!-- Left side navigation bar-->
+
+      <div class="w-[400px] h-screen bg-black">
+        <!--library-->
+
+        <div class="flex justify-between items-center w-full h-[50px]">
+          <div class="flex justify-center items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-7 text-white hover:text-gray-100 cursor-pointer ml-2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9"
+              />
+            </svg>
+
+            <span class="text-white">Your Library</span>
+          </div>
+
+          <!-- plus and minus-->
+
+          <div class="flex justify-center items-center gap-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-7 text-white hover:text-gray-100 cursor-pointer ml-2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 4.5v15m7.5-7.5h-15"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-7 text-white hover:text-gray-100 cursor-pointer mr-2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!--Artists-->
+
+        <div class="flex items-center w-full h-[40px]">
+          <span class="text-white ml-3 font-bold">Artists</span>
+        </div>
+
+        <!--search Artist-->
+
+        <div class="flex justify-between items-center w-full h-[50px]">
+          <!--search-->
+
+          <div class="flex justify-center items-center gap-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5 flex justify-center items center text-white bg-black ml-2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+
+            <input
+              class="bg-black text-white w-50 h-10"
+              type="text"
+              placeholder="search"
+            />
+          </div>
+
+          <!--recents-->
+
+          <div class="flex justify-center items-center gap-3">
+            <span class="text-white">Recents</span>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 text-white mr-3 cursor-pointer hover:text-gray-50"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!--Search artists by names-->
+
+        <div
+          class="flex justify-center items-center w-full h-[50px] mb-2 pb-2 transition ease-in-out hover:-translate-y-3 delay-1s duration-1s"
+        >
+          <div class="w-full h-[50px]">
+            <div
+              class="flex flex-wrap hover:bg-white cursor-pointer rounded-lg"
+            >
+              <img
+                class="flex justify-center items-center w-[50px] h-[50px] rounded-full ml-1"
+                src="https://th.bing.com/th/id/OIP.1rTjB2jMAKx8u3ZpzZeN3gHaE8?w=237&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"
+                alt=""
+              />
+              <div class="flex flex-col ml-2">
+                <span class="text-gray-400">Anirudh Ravichandra</span>
+                <span class="text-gray-400">Artist</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-center items-center w-full h-[50px] mb-2 pb-2 transition ease-in-out hover:-translate-y-3 delay-100s duration-100s"
+        >
+          <div class="w-full h-[50px]">
+            <div
+              class="flex flex-wrap hover:bg-white cursor-pointer rounded-lg"
+            >
+              <img
+                class="flex justify-center items-center w-[50px] h-[50px] rounded-full ml-1"
+                src="https://th.bing.com/th/id/OIP.GoXvtzZC8_2I0H6buBIrUgHaFW?w=194&h=140&c=7&r=0&o=5&dpr=2&pid=1.7"
+                alt=""
+              />
+              <div class="flex flex-col ml-2">
+                <span class="text-gray-400">Thalapathy Vijay</span>
+                <span class="text-gray-400">Artist</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-center items-center w-full h-[50px] mb-2 pb-2 transition ease-in-out hover:-translate-y-3 delay-100s duration-100s"
+        >
+          <div class="w-full h-[50px]">
+            <div
+              class="flex flex-wrap hover:bg-white cursor-pointer rounded-lg"
+            >
+              <img
+                class="flex justify-center items-center w-[50px] h-[50px] rounded-full ml-1"
+                src="https://th.bing.com/th/id/OIP.pw9KC_YTROgwRAWiu8UOcQHaEH?w=287&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"
+                alt=""
+              />
+              <div class="flex flex-col ml-2">
+                <span class="text-gray-400">Thaman s</span>
+                <span class="text-gray-400">Artist</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-center items-center w-full h-[50px] mb-2 pb-2 transition ease-in-out hover:-translate-y-3 delay-100s duration-100s"
+        >
+          <div class="w-full h-[50px]">
+            <div
+              class="flex flex-wrap hover:bg-white cursor-pointer rounded-lg"
+            >
+              <img
+                class="flex justify-center items-center w-[50px] h-[50px] rounded-full ml-1"
+                src="https://th.bing.com/th/id/OIP.Hcd-X0aYeN_UfsXJwUjKiQHaFL?rs=1&pid=ImgDetMain"
+                alt=""
+              />
+              <div class="flex flex-col ml-2">
+                <span class="text-gray-400">Ravi Basrur</span>
+                <span class="text-gray-400">Artist</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-center items-center w-full h-[50px]mb-2 pb-2 transition ease-in-out hover:-translate-y-3 delay-100s duration-100s"
+        >
+          <div class="w-full h-[50px]">
+            <div
+              class="flex flex-wrap hover:bg-white cursor-pointer rounded-lg"
+            >
+              <img
+                class="flex justify-center items-center w-[50px] h-[50px] rounded-full ml-1"
+                src="https://th.bing.com/th/id/OIP.HSva0PRLH0FJzTm8UoT31gHaFj?w=249&h=187&c=7&r=0&o=5&dpr=2&pid=1.7"
+                alt=""
+              />
+              <div class="flex flex-col ml-2">
+                <span class="text-gray-400">Devi Sri Prasad</span>
+                <span class="text-gray-400">Artist</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-center items-center w-full h-[50px] mb-2 pb-2transition ease-in-out hover:-translate-y-3 delay-100s duration-100s"
+        >
+          <div class="w-full h-[50px]">
+            <div
+              class="flex flex-wrap hover:bg-white cursor-pointer rounded-lg"
+            >
+              <img
+                class="flex justify-center items-center w-[50px] h-[50px] rounded-full ml-1"
+                src="https://th.bing.com/th/id/OIP.EzVp_g95HbkRe98atZ-KbgHaEK?w=327&h=183&c=7&r=0&o=5&dpr=2&pid=1.7"
+                alt=""
+              />
+              <div class="flex flex-col ml-2">
+                <span class="text-gray-400">Arjit Singh</span>
+                <span class="text-gray-400">Artist</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-center items-center w-full h-[50px] mb-2 pb-2 transition ease-in-out hover:-translate-y-3 delay-100s duration-100s"
+        >
+          <div class="w-full h-[50px]">
+            <div
+              class="flex flex-wrap hover:bg-white cursor-pointer rounded-lg"
+            >
+              <img
+                class="flex justify-center items-center w-[50px] h-[50px] rounded-full ml-1"
+                src="https://th.bing.com/th/id/OIP.f9AUDB4ynQ4AHnVR3AXGHwHaEs?w=290&h=185&c=7&r=0&o=5&dpr=2&pid=1.7"
+                alt=""
+              />
+              <div class="flex flex-col ml-2">
+                <span class="text-gray-400">Billie Eilish</span>
+                <span class="text-gray-400">Artist</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-center items-center w-full h-[50px] mb-2 pb-2 transition ease-in-out hover:-translate-y-3 delay-100s duration-100s"
+        >
+          <div class="w-full h-[50px]">
+            <div
+              class="flex flex-wrap hover:bg-white cursor-pointer rounded-lg"
+            >
+              <img
+                class="flex justify-center items-center w-[50px] h-[50px] rounded-full ml-1"
+                src="https://th.bing.com/th/id/OIP.Dd-zqplDFZnCcIoKc1NAywHaF7?w=214&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"
+                alt=""
+              />
+              <div class="flex flex-col ml-2">
+                <span class="text-gray-400">Honey Singh</span>
+                <span class="text-gray-400">Artist</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-center items-center w-full h-[50px] mb-2 pb-2 transition ease-in-out hover:-translate-y-3 delay-100s duration-100s"
+        >
+          <div class="w-full h-[50px]">
+            <div
+              class="flex flex-wrap hover:bg-white cursor-pointer rounded-lg"
+            >
+              <img
+                class="flex justify-center items-center w-[50px] h-[50px] rounded-full ml-1"
+                src="https://th.bing.com/th/id/OIP.F1rDiRaqAbH6Z46HEOufFgHaFj?w=194&h=146&c=7&r=0&o=5&dpr=2&pid=1.7"
+                alt=""
+              />
+              <div class="flex flex-col ml-2">
+                <span class="text-gray-400">Yuvan Shankar Raja</span>
+                <span class="text-gray-400">Artist</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-center items-center w-full h-[50px] mb-2 pb-2 transition ease-in-out hover:-translate-y-3 delay-100s duration-100s"
+        >
+          <div class="w-full h-[50px]">
+            <div
+              class="flex flex-wrap hover:bg-white cursor-pointer rounded-lg"
+            >
+              <img
+                class="flex justify-center items-center w-[50px] h-[50px] rounded-full ml-1"
+                src="https://th.bing.com/th/id/OIP.H0Vy55qttlYQvXznINw6vAHaEK?w=296&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"
+                alt=""
+              />
+              <div class="flex flex-col ml-2">
+                <span class="text-gray-400">Phonk Music</span>
+                <span class="text-gray-400">Artist</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+      <!--main section-->
+      <div class="flex flex-col w-full h-full bg-black">
+        <div class=" flex justify-start items-center gap-5 h-[60px]  ">
+            <button class=" flex justify-center items-center ml-5 h-[40px] w-[60px] rounded-full bg-black text-white hover:bg-white hover:text-black text-2xl">All</button>
+            <button class=" flex justify-center items-center w-[70px] h-[40px] bg-black text-white rounded-full hover:bg-white hover:text-black text-2xl">Music</button>
+            <button class=" flex justify-center items-center  h-[40px] w-[100px] rounded-full bg-black text-white hover:bg-white hover:text-black text-2xl">Podcasts</button>
+        </div>
+        <span class="font-bold text-white ml-3 text-2xl">Best Songs Of This Week</span>
+        <div class="flex flex-wrap w-full h-full content-start rounded-lg">
+          <div
+            class="flex flex-col w-[230px] m-4 rounded-ml shadow-lg h-fit cursor-pointer hover:bg-black hover:text-white bg-white transition ease-in-out hover:-translate-y-3 delay-100s duration-100s"
+          >
+            <img
+              class="w-full h-60 object-cover rounded-ml"
+              src="https://th.bing.com/th/id/OIP.k4BE-yr7-7bHde49mdKIMwHaHa?w=217&h=217&c=7&r=0&o=5&dpr=2&pid=1.7"
+              alt=""
+            />
+
+            <div class="flex flex-col justify-center items-center mt-3">
+              <span class="">Phonk Music Lyrics</span>
+              <span class="">6 Nov.16 min</span>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col w-[230px] m-4 rounded-ml shadow-lg h-fit cursor-pointer hover:bg-black hover:text-white bg-white transition ease-in-out hover:-translate-y-3 delay-100s duration-100s"
+          >
+            <img
+              class="w-full h-60 object-cover rounded-ml"
+              src="https://th.bing.com/th/id/OIP.PDgW7ZdSER6gpSidmfIoSAHaHa?w=198&h=198&c=7&r=0&o=5&dpr=2&pid=1.7"
+              alt=""
+            />
+
+            <div class="flex flex-col justify-center items-center mt-3">
+              <span class="">Interstellar</span>
+              <span class="">9 Nov.62 min</span>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col w-[230px] m-4 rounded-ml shadow-lg h-fit cursor-pointer hover:bg-black hover:text-white bg-white transition ease-in-out hover:-translate-y-3 delay-100s duration-100s"
+          >
+            <img
+              class="w-full h-60 object-cover rounded-ml"
+              src="https://th.bing.com/th/id/OIP.lAE0E0MEbrrdk2YW7eXvygHaHT?w=192&h=189&c=7&r=0&o=5&dpr=2&pid=1.7"
+              alt=""
+            />
+
+            <div class="flex flex-col justify-center items-center mt-3">
+              <span class="">Skyfall</span>
+              <span class=""> 10 Nov.45 min</span>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col w-[230px] m-4 rounded-ml shadow-lg h-fit cursor-pointer hover:bg-black hover:text-white bg-white transition ease-in-out hover:-translate-y-3 delay-100s duration-100s"
+          >
+            <img
+              class="w-full h-60 object-cover rounded-ml"
+              src="https://th.bing.com/th/id/OIP.NJrYXk1th1sc-CHbPYB2hAHaHb?w=183&h=184&c=7&r=0&o=5&dpr=2&pid=1.7"
+              alt=""
+            />
+
+            <div class="flex flex-col justify-center items-center mt-3">
+              <span class="">Disco</span>
+              <span class=""> 10 Nov.45 min</span>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col w-[230px] m-4 rounded-ml shadow-lg h-fit cursor-pointer hover:bg-black hover:text-white bg-white transition ease-in-out hover:-translate-y-3 delay-100s duration-100s"
+          >
+            <img
+              class="w-full h-60 object-cover rounded-ml"
+              src="https://th.bing.com/th/id/OIP.Hi28F3Y8eMpWVPsds9lQfAHaHa?w=189&h=189&c=7&r=0&o=5&dpr=2&pid=1.7"
+              alt=""
+            />
+
+            <div class="flex flex-col justify-center items-center mt-3">
+              <span class="">Sunset</span>
+              <span class=""> 10 Nov.45 min</span>
+            </div>
+          </div>
+
+        </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-white ml-3 text-2xl"> Songs sung by Thalapathy Vijay
+            </span>           
+           <div class=" flex flex-wrap w-full">
+            <div class="flex flex-col w-[230px] m-4 rounded-ml shadow-lg h-fit cursor-pointer hover:bg-black hover:text-white bg-white transition ease-in-out hover:-translate-y-3 delay-100s duration-100s">
+              <img class="w-full h-50 object-cover rounded-ml"
+                src="https://th.bing.com/th/id/OIP.o5p9m5xVPLGKQOIK51nWmwHaHa?w=174&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"
+                alt="">
+              <div class="flex flex-col justify-center items-center mt-3">
+                <span class="">NAA READY</span>
+                <span class=""> 28 Nov.50 min</span>
+              </div>
+            </div>          
+            <div class="flex flex-col w-[230px] m-4 rounded-ml shadow-lg h-fit cursor-pointer hover:bg-black hover:text-white bg-white transition ease-in-out hover:-translate-y-3 delay-100s duration-100s">
+
+                <img class="w-full h-60 object-cover rounded-ml"
+                  src="https://th.bing.com/th/id/OIP.-O6-irLFYP6g3MR8WXsOQgHaHa?w=190&h=190&c=7&r=0&o=5&dpr=2&pid=1.7"
+                  alt="">
+  
+                <div class="flex flex-col justify-center items-center mt-3">
+                  <span class="">Halamithi Habibo</span>
+                  <span class=""> 28 Nov.50 min</span>
+                </div>
+            </div>
+            <div class="flex flex-col w-[230px] m-4 rounded-ml shadow-lg h-fit cursor-pointer hover:bg-black hover:text-white bg-white transition ease-in-out hover:-translate-y-3 delay-100s duration-100s">
+
+                <img class="w-full h-60 object-cover rounded-ml"
+                  src="https://th.bing.com/th/id/OIP.isI82Fc0hFb7x9Ej2kYcWQHaHa?w=180&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"
+                  alt="">
+  
+                <div class="flex flex-col justify-center items-center mt-3">
+                  <span class="">Romantic Hits</span>
+                  <span class=""> 28 Nov.50 min</span>
+                </div>
+            </div>
+            <div class="flex flex-col w-[230px] m-4 rounded-ml shadow-lg h-fit cursor-pointer hover:bg-black hover:text-white bg-white transition ease-in-out hover:-translate-y-3 delay-100s duration-100s">
+
+                <img class="w-full h-60 object-cover rounded-ml"
+                  src="https://th.bing.com/th/id/OIP.kxBfOF_5lmBCcABGtyj0fgHaFa?w=213&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"
+                  alt="">
+  
+                <div class="flex flex-col justify-center items-center mt-3">
+                  <span class="">Thee Thalapathy</span>
+                  <span class=""> 28 Nov.50 min</span>
+                </div>
+            </div>
+           </div>
+
+        </div>
+      </div>
+
+    </section>
+  </body>
+</html>
